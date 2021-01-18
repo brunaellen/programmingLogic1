@@ -1,0 +1,24 @@
+<meta charset = "UTF-8">
+<!-- a program to calculate how many kilometres per litre of gasoline and alcohol 
+is consumed according to these parameters:
+    Gasoline (For 480km is necessary 40 litres of Gasoline)
+    Alcohol (For 480km is necessary 40 litres of Alcohol)
+-->
+<script>
+
+    document.write("<h3>Alcohol or Gasoline?</h3>");
+
+    var GasolineTankInLitres = 40;
+    var routeInKilometres = 480;
+    var gasolineConsumption = routeInKilometres / GasolineTankInLitres;
+
+    document.write(" The gasoline consumption for a route of " + routeInKilometres + "km is: " + gasolineConsumption + " Kilometres per litres! ");
+    document.write("<br>");
+
+    var AlcoholTankInLitres = 50;
+    var routeInKilometres = 480;
+    var AlcoholConsumption = routeInKilometres / AlcoholTankInLitres;
+
+    document.write( " The Alcohol consumption for a route of " + routeInKilometres + "km is: " + AlcoholConsumption + " Kilometres per litres!");
+
+</script>

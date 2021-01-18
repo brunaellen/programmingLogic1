@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<!-- a program to calculate Body Mass Index-->
+
+<script>
+
+    function show(phrase) {
+        document.write(phrase);
+        document.write("<br>");
+    }
+    
+    var name = prompt("Insert your name: ");
+    var heightInput = parseFloat(prompt("insert your height(cm): "));
+    var weightInput = parseFloat(prompt("insert your weight(kg): "));
+    var bmi = Math.round (weightInput / (heightInput * heightInput));
+
+  if (bmi < 18.5){
+        show(name + " your BMI is : " + bmi + " (underweight)");
+    } else if (bmi >= 18.5 && bmi <= 25){
+        show(name + " your BMI is : " + bmi + " (you are normal weight)");
+    } else if (bmi >= 25 && bmi <= 30){
+        show(name + " your BMI is : " + bmi + " (overweight");
+    } else if (bmi > 30){
+        show(name + " your BMI is : " + bmi + " (obese)");
+    }
+
+</script>

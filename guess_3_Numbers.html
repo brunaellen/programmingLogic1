@@ -1,0 +1,67 @@
+<meta charset="UTF-8">
+
+<!-- a program to ask user to guess 3 numbers-->
+
+<h1> Guess the Numbers. We have 3 secret numbers which you have to Guess </h1>
+
+<input/>
+<button>Insert your Number</button>
+
+<script>
+    function formulasecretNumbers () {
+       return Math.round(Math.random() * 10);
+    }
+
+    function secretNumbers(quantity) { 
+        var threeSecretNumbers = [];
+        var number = 1;
+
+        while(number <= quantity) {
+
+            var randomNumber = formulasecretNumbers();
+            var gotIt = false;
+
+            if (randomNumber !== 0) {
+                for(var position = 0; position < threeSecretNumbers.length; position++) {
+                    if(threeSecretNumbers[position] == randomNumber){
+                        gotIt = true;
+                        break;
+                    }
+                }
+
+                if (gotIt == false) {
+                    threeSecretNumbers.push(randomNumber);
+                    number++;
+                }
+            }
+        }
+        return threeSecretNumbers;
+    }
+
+    var threeSecretNumbers = secretNumbers(3);
+    console.log(threeSecretNumbers);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function checks() {
+       var gotIt = false;
+       for(var position = 0; position < threeSecretNumbers.length; position++) {
+            if(input.value == threeSecretNumbers[position]) {
+                alert("You got it!");
+                gotIt = true;
+                break;
+            }
+        }
+
+       if(gotIt == false) {
+           alert("You didn't get it!");
+        }
+        
+       input.value = "";
+       input.focus();
+    }
+
+    var button = document.querySelector("button");
+    button.onclick = checks;
+</script>

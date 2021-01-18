@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<!-- a program to ask user to create a login and then insert the same login. 
+  The user has 3 attempts to insert the right login-->
+<script>
+
+  function show(phrase){
+    document.write(phrase);
+    skipLine();
+  }
+
+  var createUser = prompt("creating a user \n Insert a user of your choice:  ");
+  var login = prompt("Insert your login: ");
+
+  var maximumNumberOfAttempts = 2;
+  var quantityOfAttempts = 1;
+
+  while (login != createUser && quantityOfAttempts <= maximumNumberOfAttempts){
+    login = prompt(" access denied, insert your login again: ");
+    quantityOfAttempts = quantityOfAttempts + 1;  
+  }
+  if (login == createUser) {
+    show( "You got it!");
+  } else if (quantityOfAttempts >= maximumNumberOfAttempts) {
+    show(" you exceeded the maximum attempts to login, try again in a few minutes! ")
+    }
+      
+</script>

@@ -1,0 +1,18 @@
+<meta charset="UTF-8">
+<!-- a program to ask user to enter his/her own age and brother's age-->
+<script>
+
+    function show(ageDifference){
+        document.write("The age difference between you and your brother is: " + "<br>" + ageDifference);
+    }
+
+    var myAge = parseInt(prompt("insert your age: "));
+    var brotherAge = parseInt(prompt("insert your brother's age: "));
+    var ageDifference = myAge - brotherAge;
+
+    if(myAge < 0 || brotherAge < 0 ){
+        alert("you have inserted an invalid number");
+    } else {
+        show(Math.abs(ageDifference));
+    }
+</script>

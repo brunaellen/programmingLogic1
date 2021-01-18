@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<!-- a program to insert ingredients of a recipe and display them to the user-->
+
+<h1> Bruna's Recipe </h1>
+
+<script>
+    
+    var Recipeingredients = [];
+
+    var ingredientQuantity = parseInt(prompt("How many ingredients do you want to insert? ")); 
+
+    var counter = 1;
+
+    function show(phrase){
+        document.write(" The ingredients for the recipe are: \n " + phrase);
+    }
+
+    while(counter <= ingredientQuantity) { 
+
+        var ingredient = prompt("Informe o ingrediente " + counter);
+                                                                    
+        var existe = false;
+        
+        for (position = 0; position < Recipeingredients.length ; position++) {
+                if (Recipeingredients[position] == ingredient ) { 
+                    existe = true;
+                    break;
+                }
+            }
+        if (existe == false){
+            Recipeingredients.push( ingredient ); 
+            counter++; 
+        }
+    }
+    console.log(Recipeingredients);
+
+    show(Recipeingredients);
+
+</script>

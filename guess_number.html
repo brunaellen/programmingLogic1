@@ -1,0 +1,25 @@
+<meta charset = "UTF-8">
+
+<!-- a program where the user ha to guess a number -->
+
+<script>
+    function skipLine(){
+        document.write("<br>");
+    }
+
+    function show(phrase){
+        document.write(phrase);
+        skipLine();
+    }
+
+    var secretNumber = Math.round(Math.random() *10);
+    console.log(secretNumber);
+
+    var guessNumber = parseInt(prompt("I will pick a secret number, you guess what number it is! \n Now insert your guess: "));
+
+    if (guessNumber == secretNumber){
+        show("you got it!");
+    } else {
+        show(" you din't get it, the secret number was: " + secretNumber);
+    }
+</script>

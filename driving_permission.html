@@ -1,0 +1,22 @@
+<meta charset = "UTF-8">
+<!-- a program to display if the user is allowed to drive-->
+<script>
+    function show(phrase){
+        document.write(phrase);
+        document.write("<br>");
+    }
+
+    var age = parseInt(prompt(" How old are you? "));
+    
+    if (age >= 18) {
+        var hasDrivingLicense = prompt(" have you a driving license? answer yes or no: ");
+
+        if(hasDrivingLicense == "yes"){
+            show("you can drive!");
+        } else {
+            show("you can't drive!");
+        }
+    } else {
+        show("you can't drive!");
+    }
+</script>

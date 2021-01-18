@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+<!-- A program to calculate the year of birth of two user-->
+<script>
+    function skipLine (){
+        document.write("<br><hr><br>");
+    }
+ 
+    function show (phrase){
+        document.write("<big>" + phrase + "</big>");
+        skipLine();
+    }
+
+    function calculateBornYear(){
+        var name = prompt("Enter the name: ");
+        var currentYear = parseInt(prompt("Enter the current year: "));
+        var age = parseInt(prompt("Enter the age: "));
+        var bornYear = currentYear - age;
+        show(name + " was born in " + bornYear);
+    }
+
+    var count = 1;
+
+    while(count < 3){
+        calculateBornYear();
+        count++;
+    }
+
+</script>
